@@ -1,5 +1,6 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Nav from './views/Nav.js';
 // template + logic
 // JSX
 //bable
@@ -14,13 +15,13 @@ const App =() => {
 
   return (
     <div className="App">
-      {console.log('check obj: ', obj)}
+      <Nav/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>Hello World with React.js and {name}!</h1>
         <a href = {link} target = '_blank' >Visit To Chanel for me</a>
-        <p>{JSON.stringify(obj)}</p>
-      </header>
+        <p style={{color: 'red',fontSize: '20px', marginTop: '15px'}}>{JSON.stringify(obj)}</p>
+      </header> 
     </div>
   );
 }
