@@ -4,13 +4,12 @@ import Nav from './views/Nav.js';
 // template + logic
 // JSX
 //bable
-const App =() => {
+const App =() => { //class
   let name = 'An';//string
-  let number = 2023;
-  let address = 'Dak Lak,VN'
-  let obj = {name: 'An', chanel: 'AnVlog'};
-  let link = 'https://www.facebook.com/profile.php?id=100048209018406'
   
+  const handleEventclick = (event) => {
+    console.log('>>>>click me', event.target.value )
+  }
 
 
   return (
@@ -19,8 +18,8 @@ const App =() => {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>Hello World with React.js and {name}!</h1>
-        <a href = {link} target = '_blank' >Visit To Chanel for me</a>
-        <p style={{color: 'red',fontSize: '20px', marginTop: '15px'}}>{JSON.stringify(obj)}</p>
+        <input type='text' value='Search?' onClick={(event) =>handleEventclick(event)} />
+        <button type='button' onClick={(event) => handleEventclick(event) }>Click me!</button>
       </header> 
     </div>
   );
