@@ -1,22 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
-
-function App() {
+// template + logic
+// JSX
+//bable
+const App =() => {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello World with React.js
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>
+        Hello World with React.js
+        </h1>
       </header>
     </div>
   );
